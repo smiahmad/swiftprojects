@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="1584.8" y="151.57421289355324"/>
         </scene>
-        <!--View Controller-->
+        <!--Emoji Definition View Controller-->
         <scene sceneID="t8H-tT-zU1">
             <objects>
-                <viewController id="eSK-06-0FK" sceneMemberID="viewController">
+                <viewController id="eSK-06-0FK" customClass="EmojiDefinitionViewController" customModule="Emoji_dictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bi5-1p-4qy"/>
                         <viewControllerLayoutGuide type="bottom" id="YNx-rI-vls"/>
@@ -57,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🚗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbq-Je-lgP">
-                                <rect key="frame" x="92" y="40" width="191" height="211"/>
+                                <rect key="frame" x="92" y="84" width="191" height="211"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="176"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -78,6 +78,10 @@
                             <constraint firstItem="YNx-rI-vls" firstAttribute="top" secondItem="b61-Q7-H1q" secondAttribute="bottom" constant="10" id="rCR-OD-hYv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emojiDefLabel" destination="b61-Q7-H1q" id="nxt-JU-GG0"/>
+                        <outlet property="emojiLabel" destination="Dbq-Je-lgP" id="eHq-mU-EAa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQy-Cb-xEW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
