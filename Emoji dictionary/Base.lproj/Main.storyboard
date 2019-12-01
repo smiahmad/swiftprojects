@@ -25,6 +25,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B1M-AR-KjJ" id="80f-Q1-9QC">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -64,6 +65,18 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A red self driven car" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b61-Q7-H1q">
                                 <rect key="frame" x="26" y="636" width="323" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth Year: 2010" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7X-d6-ivb">
+                                <rect key="frame" x="126.5" y="595" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Transportation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lop-Wb-xxd">
+                                <rect key="frame" x="91.5" y="562" width="192" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -71,14 +84,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="J7X-d6-ivb" firstAttribute="top" secondItem="lop-Wb-xxd" secondAttribute="bottom" constant="12" id="0Ze-fj-z2N"/>
                             <constraint firstItem="Dbq-Je-lgP" firstAttribute="top" secondItem="Bi5-1p-4qy" secondAttribute="bottom" constant="20" id="JLW-5B-UzN"/>
+                            <constraint firstItem="b61-Q7-H1q" firstAttribute="top" secondItem="J7X-d6-ivb" secondAttribute="bottom" constant="20" id="NA4-Dg-biO"/>
                             <constraint firstItem="b61-Q7-H1q" firstAttribute="leading" secondItem="08j-bc-JLx" secondAttribute="leadingMargin" constant="10" id="Y5z-Gb-Dka"/>
                             <constraint firstItem="Dbq-Je-lgP" firstAttribute="centerX" secondItem="08j-bc-JLx" secondAttribute="centerX" id="ae3-FD-e6T"/>
+                            <constraint firstItem="lop-Wb-xxd" firstAttribute="centerX" secondItem="08j-bc-JLx" secondAttribute="centerX" id="fMu-5y-wuW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="b61-Q7-H1q" secondAttribute="trailing" constant="10" id="oeL-Yj-zFo"/>
                             <constraint firstItem="YNx-rI-vls" firstAttribute="top" secondItem="b61-Q7-H1q" secondAttribute="bottom" constant="10" id="rCR-OD-hYv"/>
+                            <constraint firstItem="J7X-d6-ivb" firstAttribute="centerX" secondItem="08j-bc-JLx" secondAttribute="centerX" id="wNl-3M-RHg"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="birthLabel" destination="J7X-d6-ivb" id="MWg-9W-k9g"/>
+                        <outlet property="categoryLabel" destination="lop-Wb-xxd" id="mrf-71-tMu"/>
                         <outlet property="emojiDefLabel" destination="b61-Q7-H1q" id="nxt-JU-GG0"/>
                         <outlet property="emojiLabel" destination="Dbq-Je-lgP" id="eHq-mU-EAa"/>
                     </connections>

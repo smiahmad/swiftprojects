@@ -10,18 +10,23 @@ import UIKit
 
 class EmojiDefinitionViewController: UIViewController {
     
-    var emoji = ""
+    var emoji = Emoji()
 
     @IBOutlet weak var emojiLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var birthLabel: UILabel!
     @IBOutlet weak var emojiDefLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        emojiLabel.text = emoji
+        emojiLabel.text = emoji.icon
+        emojiDefLabel.text = emoji.description
+        categoryLabel.text = "Category: \(emoji.category)"
+        birthLabel.text = "Birth Year: \(emoji.year)"
         
        // "😀", "🚗", "⏰","🏖","🍏", "🕌"
-        
+        /*
         if emoji == "😀" {
             emojiDefLabel.text = "This is my happy face"
         } else if emoji == "🚗"{
@@ -32,9 +37,16 @@ class EmojiDefinitionViewController: UIViewController {
             emojiDefLabel.text = "This is Cartagena beach at Bocagrande"
         }else if emoji == "🍏" {
             emojiDefLabel.text = "This is sour apple"
+            birthLabel.text = "Birth Year: 2017"
+            categoryLabel.text = "Category: Food"
         }else if emoji == "🕌" {
             emojiDefLabel.text = "This is the MCC Masjid Pleasanton"
+            birthLabel.text = "Birth Year:2010"
+            categoryLabel.text = "Category: Places of Worship"
         }
+        */
+        
+        
         
     }
 
